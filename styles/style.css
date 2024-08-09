@@ -1,12 +1,11 @@
 
 :root{
-    --color-primario: #F3F5FC;
-    --color-secundario: #FFFFFF;
-    --color-terciario: #0A3871;
-    --color-cuaternario: #D8DFE8;
-    --color-texto-primario: #343A40;
-    --color-texto-secundario: #495057;
-
+    --light-blue-100: #F3F5FC;
+    --white: #FFFFFF;
+    --dark-blue-300: #0A3871;
+    --color-gray: #D8DFE8;
+    --gray-500: #343A40;
+    --gray-400: #495057;
 }
 
 *{
@@ -15,7 +14,7 @@
 }
 
 body{
-    background-color: var(--color-primario);
+    background-color: var(--light-blue-100);
 }
 
 .desencriptador{
@@ -33,29 +32,39 @@ body{
     margin-top: 128px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .desencriptador__interfaz__input{
-    
+    background-color: var(--light-blue-100);
+    font-size: 2rem;
+    color: var(--dark-blue-300);
+    border: none;
 }
 
 .desencriptador__interfaz__guia{
     display: flex;
     font-size: 12px;
     gap: 8px;
+    color: var(--gray-400);
 }
 
 .desencriptador__interfaz__opciones{
     display: flex;
-    gap: 24px;
-    
+    gap: 24px;   
 }
 
 .desencriptador__interfaz__opciones__boton{
     width: 328px;
     height: 67px;
     border-radius: 24px;
+    background-color: var(--dark-blue-300);
+    color: var(--white);
+}
 
+#btnDesencriptar{
+    background-color: var(--color-gray);
+    color: var(--dark-blue-300);
 }
 
 .desencriptador__resultado{
@@ -65,7 +74,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-secundario);
+    background-color: var(--white);
     border-radius: 32px;
     gap: 32px;
 }
@@ -81,9 +90,11 @@ body{
     width: 336px;
     text-align: center;
     font-size: 1.5rem; 
-    gap: 16px;   
+    gap: 16px;  
+    color: var(--gray-500); 
 }
 
 .desencriptador__resultado_texto p{
     font-size: 1rem;
+    color: var(--gray-400);
 }
