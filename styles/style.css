@@ -1,0 +1,89 @@
+
+:root{
+    --color-primario: #F3F5FC;
+    --color-secundario: #FFFFFF;
+    --color-terciario: #0A3871;
+    --color-cuaternario: #D8DFE8;
+    --color-texto-primario: #343A40;
+    --color-texto-secundario: #495057;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--color-primario);
+}
+
+.desencriptador{
+    padding: 40px;
+    display: flex;
+    gap:80px;
+}
+
+.desencriptador__logo{
+    width: 120px;
+    height: 48px;
+}
+
+.desencriptador__interfaz{
+    margin-top: 128px;
+    display: flex;
+    flex-direction: column;
+}
+
+.desencriptador__interfaz__input{
+    
+}
+
+.desencriptador__interfaz__guia{
+    display: flex;
+    font-size: 12px;
+    gap: 8px;
+}
+
+.desencriptador__interfaz__opciones{
+    display: flex;
+    gap: 24px;
+    
+}
+
+.desencriptador__interfaz__opciones__boton{
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+
+}
+
+.desencriptador__resultado{
+    width: 400px;
+    height: 944px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-secundario);
+    border-radius: 32px;
+    gap: 32px;
+}
+
+.desencriptador__resultado__imagen{
+    width: 336px;
+    height: 304px;
+}
+
+.desencriptador__resultado__texto{
+    display: flex;
+    flex-direction: column;
+    width: 336px;
+    text-align: center;
+    font-size: 1.5rem; 
+    gap: 16px;   
+}
+
+.desencriptador__resultado_texto p{
+    font-size: 1rem;
+}
