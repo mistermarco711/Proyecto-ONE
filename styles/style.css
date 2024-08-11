@@ -42,24 +42,32 @@ body{
     border: none;
 }
 
-.desencriptador__interfaz__guia{
+.desencriptador__interfaz__utilidades{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.desencriptador__interfaz__utilidades__guia{
     display: flex;
     font-size: 12px;
     gap: 8px;
     color: var(--gray-400);
 }
 
-.desencriptador__interfaz__opciones{
+.desencriptador__interfaz__utilidades__opciones{
     display: flex;
     gap: 24px;   
 }
 
-.desencriptador__interfaz__opciones__boton{
+.desencriptador__interfaz__utilidades__opciones__boton{
     width: 328px;
     height: 67px;
     border-radius: 24px;
     background-color: var(--dark-blue-300);
     color: var(--white);
+    border-color: var(--dark-blue-300);
+    border-style: solid;
 }
 
 #btnDesencriptar{
