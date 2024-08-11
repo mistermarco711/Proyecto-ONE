@@ -93,16 +93,20 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 32px;
+    padding: 32px;  
 }
 
-.main__mensaje__imagen{
+.main__mensaje__inicial{
+       
+}
+
+.main__mensaje__inicial__imagen{
     width: 336px;
     height: 304px;
+    margin-bottom: 32px;
 }
 
-.main__mensaje__texto{
+.main__mensaje__inicial__texto{
     display: flex;
     flex-direction: column;
     width: 336px;
@@ -114,7 +118,7 @@ body{
     color: var(--gray-500); 
 }
 
-.main__mensaje__texto p{
+.main__mensaje__inicial__texto p{
     font-weight: 400;
     font-size: 1rem;
     color: var(--gray-400);
