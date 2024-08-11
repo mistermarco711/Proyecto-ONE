@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,32 +8,36 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
+        
     </header>
-    <main class="desencriptador">
-        <img class="desencriptador__logo" src="./assets/Logo.png" alt="Logo principal">
-        <section class="desencriptador__interfaz">
-            <input id="entradaUsuario" class="desencriptador__interfaz__input" type="text" value="Ingrese texto aqui">
-            <div class="desencriptador__interfaz__utilidades">
-                <div class="desencriptador__interfaz__utilidades__guia">
+    <main class="main"> 
+        <img class="main__logo" src="./assets/Logo.png" alt="Logo principal"> 
+        <section class="main__interfaz">
+            <textarea class="main__interfaz__entrada" cols="30" name="textarea" id="entradaUsuario" 
+            placeholder="Ingrese texto aquí"></textarea>
+            <div class="main__interfaz__utilidades">
+                <div class="main__interfaz__utilidades__guia">
                     <img src="./assets/Vector.png" alt="Vector exclamacion">
                     <p>Sólo letras minúsculas y sin acento</p>
                 </div>
-                <div class="desencriptador__interfaz__utilidades__opciones">
-                    <button id="btnEncriptar" class="desencriptador__interfaz__utilidades__opciones__boton">Encriptar</button>
-                    <button id="btnDesencriptar" class="desencriptador__interfaz__utilidades__opciones__boton">Desencriptar</button>
+                <div class="main__interfaz__utilidades__opciones">
+                    <button id="btnEncriptar" class="main__interfaz__utilidades__opciones__boton">Encriptar</button>
+                    <button id="btnDesencriptar" class="main__interfaz__utilidades__opciones__boton">Desencriptar</button>
                 </div>
             </div>
         </section>
-        <div class="desencriptador__resultado">
-            <img class="desencriptador__resultado__imagen" src="./assets/Muñeco.png" alt="Imagen muneco">
-            <div class="desencriptador__resultado__texto">
+        <div class="main__mensaje">
+            <img class="main__mensaje__imagen" src="./assets/Muñeco.png" alt="Imagen muneco">
+            <div class="main__mensaje__texto">
                 <h2>Ningún mensaje fue encontrado</h2>
                 <p>Ingrese el texto que desee encriptar o desencriptar</p>
             </div>
         </div>
     </main>
-    <footer></footer>
-</body>
+    <footer class="footer">
 
+    </footer>
+<script src="./script.js"></script>
+</body>
 </html>

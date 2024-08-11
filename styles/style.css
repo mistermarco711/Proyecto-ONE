@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
     --light-blue-100: #F3F5FC;
@@ -6,6 +7,7 @@
     --color-gray: #D8DFE8;
     --gray-500: #343A40;
     --gray-400: #495057;
+    --fuente-inter: "Inter", sans-serif;
 }
 
 *{
@@ -17,50 +19,55 @@ body{
     background-color: var(--light-blue-100);
 }
 
-.desencriptador{
+.main{
     padding: 40px;
     display: flex;
     gap:80px;
 }
 
-.desencriptador__logo{
+.main__logo{
     width: 120px;
     height: 48px;
 }
 
-.desencriptador__interfaz{
+.main__interfaz{
     margin-top: 128px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.desencriptador__interfaz__input{
+.main__interfaz__entrada{
     background-color: var(--light-blue-100);
+    font-family: var(--fuente-inter);
+    font-weight: 400;
     font-size: 2rem;
     color: var(--dark-blue-300);
     border: none;
 }
 
-.desencriptador__interfaz__utilidades{
+.main__interfaz__utilidades{
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.desencriptador__interfaz__utilidades__guia{
+.main__interfaz__utilidades__guia{
     display: flex;
     font-size: 12px;
     gap: 8px;
     color: var(--gray-400);
+    font-family: var(--fuente-inter);
+    font-weight: 400;
+    font-size: 0.75rem;
 }
 
-.desencriptador__interfaz__utilidades__opciones{
+.main__interfaz__utilidades__opciones{
     display: flex;
     gap: 24px;   
 }
 
-.desencriptador__interfaz__utilidades__opciones__boton{
+.main__interfaz__utilidades__opciones__boton{
     width: 328px;
     height: 67px;
     border-radius: 24px;
@@ -68,6 +75,9 @@ body{
     color: var(--white);
     border-color: var(--dark-blue-300);
     border-style: solid;
+    font-family: var(--fuente-inter);
+    font-weight: 400;
+    font-size: 1rem;
 }
 
 #btnDesencriptar{
@@ -75,34 +85,40 @@ body{
     color: var(--dark-blue-300);
 }
 
-.desencriptador__resultado{
+.main__mensaje{
     width: 400px;
     height: 944px;
+    background-color: var(--white);
+    border-radius: 32px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--white);
-    border-radius: 32px;
     gap: 32px;
 }
 
-.desencriptador__resultado__imagen{
+.main__mensaje__imagen{
     width: 336px;
     height: 304px;
 }
 
-.desencriptador__resultado__texto{
+.main__mensaje__texto{
     display: flex;
     flex-direction: column;
     width: 336px;
     text-align: center;
+    font-family: var(--fuente-inter);
+    font-weight: 700;
     font-size: 1.5rem; 
     gap: 16px;  
     color: var(--gray-500); 
 }
 
-.desencriptador__resultado_texto p{
+.main__mensaje__texto p{
+    font-weight: 400;
     font-size: 1rem;
     color: var(--gray-400);
 }
+
+
+
