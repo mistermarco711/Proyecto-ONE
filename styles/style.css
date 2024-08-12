@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root{
+:root {
     --light-blue-100: #F3F5FC;
     --white: #FFFFFF;
     --dark-blue-300: #0A3871;
@@ -10,49 +10,52 @@
     --fuente-inter: "Inter", sans-serif;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     background-color: var(--light-blue-100);
 }
 
-.main{
+.main {
     padding: 40px;
     display: flex;
-    gap:80px;
+    gap: 80px;
 }
 
-.main__logo{
+.main__logo {
     width: 120px;
     height: 48px;
 }
 
-.main__interfaz{
+.main__interfaz {
     margin-top: 128px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.main__interfaz__entrada{
+.main__interfaz__entrada {
     background-color: var(--light-blue-100);
     font-family: var(--fuente-inter);
     font-weight: 400;
     font-size: 2rem;
     color: var(--dark-blue-300);
     border: none;
+    resize: vertical;
+    min-height: 60px;
+    max-height: 100px;
 }
 
-.main__interfaz__utilidades{
+.main__interfaz__utilidades {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.main__interfaz__utilidades__guia{
+.main__interfaz__utilidades__guia {
     display: flex;
     font-size: 12px;
     gap: 8px;
@@ -62,12 +65,12 @@ body{
     font-size: 0.75rem;
 }
 
-.main__interfaz__utilidades__opciones{
+.main__interfaz__utilidades__opciones {
     display: flex;
-    gap: 24px;   
+    gap: 24px;
 }
 
-.main__interfaz__utilidades__opciones__boton{
+.main__interfaz__utilidades__opciones__boton {
     width: 328px;
     height: 67px;
     border-radius: 24px;
@@ -80,49 +83,75 @@ body{
     font-size: 1rem;
 }
 
-#btnDesencriptar{
+#btnDesencriptar {
     background-color: var(--color-gray);
     color: var(--dark-blue-300);
 }
 
-.main__mensaje{
+.main__mensaje {
     width: 400px;
     height: 944px;
     background-color: var(--white);
     border-radius: 32px;
+    padding: 32px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 32px;  
 }
 
-.main__mensaje__inicial{
-       
+.main__mensaje__inicial {
+    align-self: center;
 }
 
-.main__mensaje__inicial__imagen{
+.main__mensaje__inicial__imagen {
     width: 336px;
     height: 304px;
     margin-bottom: 32px;
 }
 
-.main__mensaje__inicial__texto{
+.main__mensaje__inicial__texto {
     display: flex;
     flex-direction: column;
     width: 336px;
     text-align: center;
     font-family: var(--fuente-inter);
     font-weight: 700;
-    font-size: 1.5rem; 
-    gap: 16px;  
-    color: var(--gray-500); 
+    font-size: 1.5rem;
+    gap: 16px;
+    color: var(--gray-500);
 }
 
-.main__mensaje__inicial__texto p{
+.main__mensaje__inicial__texto p {
     font-weight: 400;
     font-size: 1rem;
     color: var(--gray-400);
 }
 
+.main__mensaje__encriptado {
+    display: flex;
+    flex-direction: column;
+}
 
+.main__mensaje__encriptado__texto {
+    margin-bottom: 32px;
+    resize: none;
+    width: 336px;
+    height: 730px;
+}
 
+.main__mensaje__encriptado__opciones {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.main__mensaje__encriptado__opciones__boton {
+    width: 336px;
+    height: 67px;
+    border-radius: 24px;
+    background-color: var(--white);
+    color: var(--dark-blue-300);
+    border-color: var(--dark-blue-300);
+    border-style: solid;
+    font-family: var(--fuente-inter);
+    font-weight: 400;
+    font-size: 1rem;
+}
