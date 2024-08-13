@@ -102,7 +102,7 @@ body {
 }
 
 .main__mensaje {
-    width: 368px;
+    width: 336px;
     height: 912px;
     background-color: var(--white);
     border-radius: 32px;
@@ -114,7 +114,6 @@ body {
 
 .main__mensaje__inicial {
     display: flex;
-    margin: 0;
 }
 
 .main__mensaje__inicial__imagen {
@@ -174,6 +173,7 @@ body {
 }
 
 .footer{
+
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -223,7 +223,7 @@ body {
         display: none;
     }
     .main__mensaje__encriptado__texto{
-        height: auto;
+        height: 100px;
     }
 }
 
@@ -235,13 +235,16 @@ body {
     }
     .main__interfaz{
         align-self: baseline;
+        width: 100%;
+        gap: 25px;
+    }
+    .main__interfaz__entrada{
         height: auto;
-        width: 100vw;
     }
     .main__mensaje{
         padding: 32px 0;
         height: auto;
-        width: 100vw;
+        width: 100%;
     }
     .main__mensaje__inicial__imagen{
         display: none;
