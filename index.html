@@ -15,15 +15,16 @@
     <main class="main">
         <img class="main__logo" src="./assets/Logo.png" alt="Logo principal">
         <section class="main__interfaz">
-            <textarea class="main__interfaz__entrada" name="txtaEncriptado" id="txtaEncriptado" placeholder="Ingrese texto aquí"></textarea>
+            <textarea class="main__interfaz__entrada" name="txtaEncriptado" id="txtaEncriptado"
+                placeholder="Ingrese texto aquí"></textarea>
             <div class="main__interfaz__utilidades">
-                <div class="main__interfaz__utilidades__guia">
-                    <img src="./assets/Vector.png" alt="Vector exclamacion">
-                    <p>Sólo letras minúsculas y sin acento</p>
-                </div>
+                <p class="main__interfaz__utilidades__guia">
+                    <img src="./assets/Vector.png" alt="Vector exclamacion"> Sólo letras minúsculas y sin acento
+                </p>
                 <div class="main__interfaz__utilidades__opciones">
                     <button id="btnEncriptar" class="main__interfaz__utilidades__opciones__boton">Encriptar</button>
-                    <button id="btnDesencriptar"class="main__interfaz__utilidades__opciones__boton">Desencriptar</button>
+                    <button id="btnDesencriptar"
+                        class="main__interfaz__utilidades__opciones__boton">Desencriptar</button>
                 </div>
             </div>
         </section>
@@ -36,7 +37,8 @@
                 </div>
             </div>
             <div id="main__mensaje__encriptado" class="main__mensaje__encriptado">
-                <textarea class="main__mensaje__encriptado__texto" name="txtaDesencriptado" id="txtaDesencriptado" readonly></textarea>
+                <textarea class="main__mensaje__encriptado__texto" name="txtaDesencriptado" id="txtaDesencriptado"
+                    readonly></textarea>
                 <div class="main__mensaje__encriptado__opciones">
                     <button id="btnCopiar" class="main__mensaje__encriptado__opciones__boton">Copiar</button>
                     <button id="btnLimpiar" class="main__mensaje__encriptado__opciones__boton">Limpiar</button>
@@ -45,7 +47,16 @@
         </section>
     </main>
     <footer class="footer">
-
+        <p>Desarrollado por Marco Antonio Sandoval V.</p>
+        <div class="footer__enlaces">
+            <a class="footer__enlaces__links" href="https://github.com/mistermarco711">
+                <img src="./assets/github.png" alt="">Github</a>
+            <a class="footer__enlaces__links" href="https://www.linkedin.com/in/marco-antonio-sandoval/">
+                <img src="./assets/linkedin.png" alt="">Linkedin</a>
+            <a class="footer__enlaces__links" href="#">
+                <img src="./assets/instagram.png" alt="">Instagram</a>
+        </div>
+        
     </footer>
     <script src="./script.js"></script>
 </body>
