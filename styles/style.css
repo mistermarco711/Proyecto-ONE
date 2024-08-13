@@ -20,7 +20,7 @@ body {
 }
 
 .main {
-    padding: 40px;
+    padding: 40px 40px 40px 40px;
     display: flex;
     gap: 80px;
 }
@@ -46,6 +46,10 @@ body {
     border: none;
     resize: none;
     height: 400px;
+}
+
+.main__interfaz__entrada:focus{
+    outline: none;
 }
 
 .main__interfaz__utilidades {
@@ -82,9 +86,18 @@ body {
     font-size: 1rem;
 }
 
+.main__interfaz__utilidades__opciones__boton:hover{
+    background-color: var(--gray-400);
+}
+
 #btnDesencriptar {
     background-color: var(--color-gray);
     color: var(--dark-blue-300);
+}
+
+#btnDesencriptar:hover {
+    color: var(--white);
+    background-color: var(--gray-400);
 }
 
 .main__mensaje {
@@ -92,19 +105,19 @@ body {
     height: 944px;
     background-color: var(--white);
     border-radius: 32px;
-    padding: 32px;
     display: flex;
-    align-items: flex-end;
+    justify-content: center;
 }
 
 .main__mensaje__inicial {
     align-self: center;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .main__mensaje__inicial__imagen {
     width: 336px;
     height: 304px;
-    margin-bottom: 32px;
 }
 
 .main__mensaje__inicial__texto {
@@ -155,6 +168,11 @@ body {
     font-size: 1rem;
 }
 
+.main__mensaje__encriptado__opciones__boton:hover{
+    background-color: var(--dark-blue-300);
+    color: var(--white);
+}
+
 @media (max-width: 768px){
     .main{
         flex-direction: column;
@@ -165,5 +183,8 @@ body {
     .main{
         flex-direction: column;
     }
-    
+    .main__mensaje{
+        height: auto;
+    }
+
 }
