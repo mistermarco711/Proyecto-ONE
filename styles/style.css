@@ -20,7 +20,7 @@ body {
 }
 
 .main {
-    padding: 40px 40px 40px 40px;
+    padding: 40px;
     display: flex;
     gap: 80px;
 }
@@ -31,10 +31,10 @@ body {
 }
 
 .main__interfaz {
-    margin-top: 128px;
+    align-self: end;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 290px;
 }
 
 .main__interfaz__entrada {
@@ -46,6 +46,7 @@ body {
     border: none;
     resize: none;
     height: 400px;
+    width: 680px;
 }
 
 .main__interfaz__entrada:focus{
@@ -101,18 +102,19 @@ body {
 }
 
 .main__mensaje {
-    width: 400px;
-    height: 944px;
+    width: 368px;
+    height: 912px;
     background-color: var(--white);
     border-radius: 32px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 32px;
 }
 
 .main__mensaje__inicial {
-    align-self: center;
     display: flex;
-    flex-direction: column-reverse;
+    margin: 0;
 }
 
 .main__mensaje__inicial__imagen {
@@ -139,11 +141,9 @@ body {
 }
 
 .main__mensaje__encriptado__texto {
-    align-self: flex-start;
     font-family: var(--fuente-inter);
     font-weight: 400;
     font-size: 2rem;
-    margin-bottom: 32px;
     resize: none;
     width: 336px;
     height: 730px;
@@ -173,18 +173,84 @@ body {
     color: var(--white);
 }
 
+.footer{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 10px;
+    font-family: var(--fuente-inter);
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--gray-500);
+}
+
+.footer__enlaces{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer__enlaces__links{
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+
+    color: var(--white);
+}
+
+.footer__enlaces__links:hover{
+    background-color: var(--gray-400);
+}
+
 @media (max-width: 768px){
     .main{
         flex-direction: column;
+        
+    }
+    .main__mensaje{
+        padding: 32px 0;
+        height: auto;
+    }
+    .main__mensaje__inicial__imagen{
+        display: none;
+    }
+    .main__mensaje__encriptado__texto{
+        height: auto;
     }
 }
 
 @media (max-width: 375px){
     .main{
         flex-direction: column;
+        gap: 40px;
+        padding: 20px;
+    }
+    .main__interfaz{
+        align-self: baseline;
+        height: auto;
+        width: 100vw;
     }
     .main__mensaje{
+        padding: 32px 0;
         height: auto;
+        width: 100vw;
+    }
+    .main__mensaje__inicial__imagen{
+        display: none;
+    }
+    .main__mensaje__encriptado__texto{
+        height: auto;
+    }
+    .footer__enlaces{
+        flex-direction: column;
     }
 
 }
