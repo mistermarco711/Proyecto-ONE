@@ -1,3 +1,9 @@
+/***************************************************************************************************
+***************************ENCRIPTADOR Y DESENCRIPTADOR DE TEXTO************************************ 
+***************************Realizado por: Marco Antonio Sandoval************************************
+********************************Fecha:13 de agosto de 2024******************************************/
+
+//Defición de variables 
 const entradaUsuario = document.getElementById("txtaEncriptado");
 const salidaUsuario = document.getElementById("txtaDesencriptado");
 
@@ -9,6 +15,7 @@ const btnDesencriptar = document.getElementById("btnDesencriptar");
 const btnCopiar = document.getElementById("btnCopiar");
 const btnLimpiar = document.getElementById("btnLimpiar");
 
+//Asignación de eventos en los botones
 btnEncriptar.addEventListener("click", mostrarTextoEncriptado)
 btnDesencriptar.addEventListener("click", mostrarTextoDesencriptado);
 btnCopiar.addEventListener("click", copiarTexto);
@@ -16,20 +23,21 @@ btnLimpiar.addEventListener("click", limpiarVentana);
 
 condicionesIniciales();
 
+//Función para inicializar el programa y ocultar el textarea de resultado
 function condicionesIniciales() {
     divMensajeEncriptado.style.display = "none";
     divMensajeInicial.style.display = "block";
     entradaUsuario.value = "";
     salidaUsuario.value = "";
 }
-
+//Función para mostrar el resultado del texto encriptado y ocultar el mensaje de bienvenida
 function mostrarTextoEncriptado() {
     divMensajeInicial.style.display = "none";
     divMensajeEncriptado.style.display = "block";
     let mensajeEncriptado = encriptarDesencriptar(entradaUsuario.value, 1);
     salidaUsuario.value = mensajeEncriptado;
 }
-
+//Función para mostrar el resultado del texto desencriptado y ocultar el mensaje de bienvenida
 function mostrarTextoDesencriptado() {
     let mensajeDesencriptado;
     if (salidaUsuario.value != "") {
@@ -38,12 +46,10 @@ function mostrarTextoDesencriptado() {
         divMensajeInicial.style.display = "none";
         divMensajeEncriptado.style.display = "block";
         mensajeDesencriptado = encriptarDesencriptar(entradaUsuario.value, 2);
-        
     }
     salidaUsuario.value = mensajeDesencriptado;
-
 }
-
+//Función qeu contiene las reglas de encriptación y devuelve el código encriptado o desencriptado
 function encriptarDesencriptar(texto, opcion) {
     let matrixEncriptado = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
     if (opcion == 1) {
@@ -61,12 +67,13 @@ function encriptarDesencriptar(texto, opcion) {
         }
         return texto;
     }
-
 }
+//Función que permite copiar el texto en el clipboard
 function copiarTexto() {
-
+    navigator.clipboard.writeText(salidaUsuario.value);
+    alert('Contenido copiado');
 }
-
+//Función para limpiar todos los datos de la ventana y volver a condiciones iniciales
 function limpiarVentana() {
     condicionesIniciales();
 }

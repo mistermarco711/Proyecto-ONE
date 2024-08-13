@@ -154,3 +154,16 @@ body {
     font-weight: 400;
     font-size: 1rem;
 }
+
+@media (max-width: 768px){
+    .main{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 375px){
+    .main{
+        flex-direction: column;
+    }
+    
+}
