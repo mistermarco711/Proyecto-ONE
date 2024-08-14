@@ -26,14 +26,14 @@ condicionesIniciales();
 //Función para inicializar el programa y ocultar el textarea de resultado
 function condicionesIniciales() {
     divMensajeEncriptado.style.display = "none";
-    divMensajeInicial.style.display = "block";
+    divMensajeInicial.style.display = "flex";
     entradaUsuario.value = "";
     salidaUsuario.value = "";
 }
 //Función para mostrar el resultado del texto encriptado y ocultar el mensaje de bienvenida
 function mostrarTextoEncriptado() {
     divMensajeInicial.style.display = "none";
-    divMensajeEncriptado.style.display = "block";
+    divMensajeEncriptado.style.display = "flex";
     let mensajeEncriptado = encriptarDesencriptar(entradaUsuario.value, 1);
     salidaUsuario.value = mensajeEncriptado;
 }
@@ -44,7 +44,7 @@ function mostrarTextoDesencriptado() {
         mensajeDesencriptado = encriptarDesencriptar(salidaUsuario.value, 2);
     } else {
         divMensajeInicial.style.display = "none";
-        divMensajeEncriptado.style.display = "block";
+        divMensajeEncriptado.style.display = "flex";
         mensajeDesencriptado = encriptarDesencriptar(entradaUsuario.value, 2);
     }
     salidaUsuario.value = mensajeDesencriptado;
