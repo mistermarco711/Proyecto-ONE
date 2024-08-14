@@ -47,9 +47,10 @@ body {
     resize: none;
     height: 400px;
     width: 680px;
+    text-transform: lowercase;
 }
 
-.main__interfaz__entrada:focus{
+.main__interfaz__entrada:focus {
     outline: none;
 }
 
@@ -75,20 +76,16 @@ body {
 }
 
 .main__interfaz__utilidades__opciones__boton {
+    cursor: pointer;
+    border: none;
     width: 328px;
     height: 67px;
     border-radius: 24px;
     background-color: var(--dark-blue-300);
     color: var(--white);
-    border-color: var(--dark-blue-300);
-    border-style: solid;
     font-family: var(--fuente-inter);
     font-weight: 400;
     font-size: 1rem;
-}
-
-.main__interfaz__utilidades__opciones__boton:hover{
-    background-color: var(--gray-400);
 }
 
 #btnDesencriptar {
@@ -113,6 +110,7 @@ body {
 
 .main__mensaje__inicial {
     display: flex;
+    flex-direction: column;
 }
 
 .main__mensaje__inicial__imagen {
@@ -138,7 +136,7 @@ body {
     color: var(--gray-400);
 }
 
-.main__mensaje__encriptado{
+.main__mensaje__encriptado {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -152,6 +150,7 @@ body {
     resize: none;
     width: 336px;
     height: 700px;
+    border:none;
 }
 
 .main__mensaje__encriptado__opciones {
@@ -161,25 +160,19 @@ body {
 }
 
 .main__mensaje__encriptado__opciones__boton {
+    cursor: pointer;
+    border: none;
     width: 336px;
     height: 67px;
     border-radius: 24px;
     background-color: var(--white);
     color: var(--dark-blue-300);
-    border-color: var(--dark-blue-300);
-    border-style: solid;
     font-family: var(--fuente-inter);
     font-weight: 400;
     font-size: 1rem;
 }
 
-.main__mensaje__encriptado__opciones__boton:hover{
-    background-color: var(--dark-blue-300);
-    color: var(--white);
-}
-
-.footer{
-
+.footer {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -192,14 +185,14 @@ body {
     background-color: var(--gray-500);
 }
 
-.footer__enlaces{
+.footer__enlaces {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 25px;
 }
 
-.footer__enlaces__links{
+.footer__enlaces__links {
     padding: 5px 0;
     display: flex;
     align-items: center;
@@ -208,142 +201,177 @@ body {
     text-decoration: none;
     text-align: center;
     border-radius: 8px;
-
     color: var(--white);
 }
+/*Medida para dispositivos de escritorio*/
+@media (min-width:1024px){
+    .main__interfaz__utilidades__opciones__boton:hover {
+        background-color: var(--gray-400);
+    }
+    
+    .main__mensaje__encriptado__opciones__boton:hover {
+        background-color: var(--dark-blue-300);
+        color: var(--white);
+    }
 
-.footer__enlaces__links:hover{
-    background-color: var(--gray-400);
+    .footer__enlaces__links:hover {
+        background-color: var(--gray-400);
+    }
 }
-
-@media (min-width:520px) and (max-width: 1024px){
-    body{
+/*Medida para dispositivos tablets*/
+@media (min-width:520px) and (max-width: 1024px) {
+    body {
         width: 100vw;
         height: 100vh;
     }
-    .main{
+
+    .main {
         margin: 24px 16px;
         flex-direction: column;
         padding: 0;
         gap: 40px;
     }
-    .main__interfaz{
+
+    .main__interfaz {
         align-self: center;
         align-items: center;
         width: 100%;
-        gap: 40px;
+        gap: 100px;
     }
-    .main__interfaz__entrada{
+
+    .main__interfaz__entrada {
         height: auto;
         width: 80%;
     }
-    .main__interfaz__utilidades{
+
+    .main__interfaz__utilidades {
         align-items: center;
         width: 100%;
     }
-    .main__interfaz__utilidades__opciones{
+
+    .main__interfaz__utilidades__opciones {
         height: 100%;
         width: 100%;
         justify-content: center;
     }
-    .main__interfaz__utilidades__opciones__boton{
+
+    .main__interfaz__utilidades__opciones__boton {
         width: 30%;
     }
-    .main__mensaje{
+
+    .main__mensaje {
         align-self: center;
         justify-content: center;
         padding: 20px 0;
         height: auto;
         width: 95%;
     }
-    .main__mensaje__inicial{
+
+    .main__mensaje__inicial {
         flex-direction: column;
     }
-    .main__mensaje__encriptado{
+
+    .main__mensaje__encriptado {
         width: 100%;
         display: flex;
         align-items: center;
         gap: 16px;
     }
-    .main__mensaje__encriptado__texto{
+
+    .main__mensaje__encriptado__texto {
         height: auto;
         width: 80%;
     }
-    .main__mensaje__encriptado__opciones{
+
+    .main__mensaje__encriptado__opciones {
         flex-direction: row;
         justify-content: center;
         width: 100%;
-        
     }
-    .main__mensaje__encriptado__opciones__boton{
+
+    .main__mensaje__encriptado__opciones__boton {
         width: 30%;
     }
-    .footer__enlaces{
-        flex-direction: column;
+
+    .footer__enlaces {
+        flex-direction: row;
     }
 }
-
-@media (max-width: 520px){
-    body{
+/*Medida para dispositivos celulares o smartphones*/
+@media (max-width: 520px) {
+    body {
         width: 100vw;
         height: 100vh;
     }
-    .main{
+
+    .main {
         margin: 24px 16px;
         flex-direction: column;
         padding: 0;
         gap: 40px;
     }
-    .main__interfaz{
+
+    .main__interfaz {
         align-self: center;
         align-items: center;
         width: 100%;
         gap: 40px;
     }
-    .main__interfaz__entrada{
+
+    .main__interfaz__entrada {
         height: auto;
         width: 80%;
     }
-    .main__interfaz__utilidades{
+
+    .main__interfaz__utilidades {
         align-items: center;
         width: 100%;
     }
-    .main__interfaz__utilidades__opciones{
+
+    .main__interfaz__utilidades__opciones {
         flex-direction: column;
         height: 100%;
         width: 45%;
     }
-    .main__interfaz__utilidades__opciones__boton{
+
+    .main__interfaz__utilidades__opciones__boton {
         width: 100%;
     }
-    .main__mensaje{
+
+    .main__mensaje {
         align-self: center;
         justify-content: center;
         padding: 20px 0;
         height: auto;
         width: 95%;
     }
-    .main__mensaje__inicial__imagen{
+
+    .main__mensaje__inicial__imagen {
         display: none;
     }
-    .main__mensaje__encriptado{
+
+    .main__mensaje__encriptado {
         width: 100%;
         display: flex;
         align-items: center;
         gap: 16px;
     }
-    .main__mensaje__encriptado__texto{
+
+    .main__mensaje__encriptado__texto {
         height: auto;
         width: 80%;
     }
-    .main__mensaje__encriptado__opciones{
+
+    .main__mensaje__encriptado__opciones {
         width: 45%;
         align-items: center;
     }
-    .main__mensaje__encriptado__opciones__boton{
+
+    .main__mensaje__encriptado__opciones__boton {
         width: 100%;
     }
-    .footer__enlaces{
+
+    .footer__enlaces {
         flex-direction: column;
     }
 }
