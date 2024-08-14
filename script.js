@@ -21,6 +21,15 @@ btnDesencriptar.addEventListener("click", mostrarTextoDesencriptado);
 btnCopiar.addEventListener("click", copiarTexto);
 btnLimpiar.addEventListener("click", limpiarVentana);
 
+entradaUsuario.addEventListener("keydown", (evento) => {
+    if (evento.keyCode === 13) {
+      evento.preventDefault();
+    }
+  });
+entradaUsuario.addEventListener("keyup", () => {
+    entradaUsuario.value = entradaUsuario.value.replace(/[^a-zA-Z^ ]/g,'');
+})
+
 condicionesIniciales();
 
 //Función para inicializar el programa y ocultar el textarea de resultado
