@@ -30,24 +30,37 @@ function condicionesIniciales() {
     entradaUsuario.value = "";
     salidaUsuario.value = "";
 }
+//Función de validaciones
+function validaciones() {
+    if (entradaUsuario.value == "") {
+        alert("¡No hay dato! Por favor escriba el texto que desee procesar");
+        return false;
+    } else {
+        return true;
+    }
+}
 //Función para mostrar el resultado del texto encriptado y ocultar el mensaje de bienvenida
 function mostrarTextoEncriptado() {
-    divMensajeInicial.style.display = "none";
-    divMensajeEncriptado.style.display = "flex";
-    let mensajeEncriptado = encriptarDesencriptar(entradaUsuario.value, 1);
-    salidaUsuario.value = mensajeEncriptado;
+    if (validaciones() == true) {
+        divMensajeInicial.style.display = "none";
+        divMensajeEncriptado.style.display = "flex";
+        let mensajeEncriptado = encriptarDesencriptar(entradaUsuario.value, 1);
+        salidaUsuario.value = mensajeEncriptado;
+    }
 }
 //Función para mostrar el resultado del texto desencriptado y ocultar el mensaje de bienvenida
 function mostrarTextoDesencriptado() {
-    let mensajeDesencriptado;
-    if (salidaUsuario.value != "") {
-        mensajeDesencriptado = encriptarDesencriptar(salidaUsuario.value, 2);
-    } else {
-        divMensajeInicial.style.display = "none";
-        divMensajeEncriptado.style.display = "flex";
-        mensajeDesencriptado = encriptarDesencriptar(entradaUsuario.value, 2);
+    if (validaciones() == true) {
+        let mensajeDesencriptado;
+        if (salidaUsuario.value != "") {
+            mensajeDesencriptado = encriptarDesencriptar(salidaUsuario.value, 2);
+        } else {
+            divMensajeInicial.style.display = "none";
+            divMensajeEncriptado.style.display = "flex";
+            mensajeDesencriptado = encriptarDesencriptar(entradaUsuario.value, 2);
+        }
+        salidaUsuario.value = mensajeDesencriptado;
     }
-    salidaUsuario.value = mensajeDesencriptado;
 }
 //Función qeu contiene las reglas de encriptación y devuelve el código encriptado o desencriptado
 function encriptarDesencriptar(texto, opcion) {
